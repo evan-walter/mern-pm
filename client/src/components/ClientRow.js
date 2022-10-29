@@ -6,7 +6,7 @@ import { GET_CLIENTS } from '../queries/clientQueries'
 export default function ClientRow({ client }) {
   const [deleteClient] = useMutation(DELETE_CLIENT, {
     variables: { id: client.id },
-    update(cache, { data: deleteClient }) {
+    update(cache, { data: { deleteClient } }) {
       const { clients } = cache.readQuery({ query: GET_CLIENTS })
       cache.writeQuery({
         query: GET_CLIENTS,
