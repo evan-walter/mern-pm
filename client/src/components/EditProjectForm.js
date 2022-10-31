@@ -46,6 +46,11 @@ export default function EditProjectForm({ project }) {
         </div>
         <div className='mb-3'>
           <label className='form-label'>Status</label>
+          <p>
+            Note: When editing a project, the initial status selection will
+            always be "Not Started." Be sure to select the intended status
+            before submission.
+          </p>
           <select
             id='status'
             className='form-select'
