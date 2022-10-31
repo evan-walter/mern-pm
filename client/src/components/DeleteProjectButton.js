@@ -10,17 +10,6 @@ export default function DeleteProjectButton({ projectId }) {
     variables: { id: projectId },
     onCompleted: () => navigate('/'),
     refetchQueries: [{ query: GET_PROJECTS }],
-    // update(cache, { data: { deleteProject } }) {
-    //   const { projects } = cache.readQuery({ query: GET_PROJECTS })
-    //   cache.writeQuery({
-    //     query: GET_PROJECTS,
-    //     data: {
-    //       projects: projects.filter(
-    //         (project) => project.id !== deleteProject.project.id
-    //       ),
-    //     },
-    //   })
-    // },
   })
 
   return (
